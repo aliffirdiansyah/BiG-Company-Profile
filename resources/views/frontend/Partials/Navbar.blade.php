@@ -22,11 +22,17 @@
                 </li>
 
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Katalog</a>
+                    <a class="nav-link {{ Route::is(patterns: 'katalog') ? 'active' : '' }}" href="{{ route('katalog') }}">
+                        Katalog
+                    </a>
                 </li>
+
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Galeri</a>
+                    <a class="nav-link {{ Route::is(patterns: 'galeri') ? 'active' : '' }}" href="{{ route('galeri') }}">
+                        Galeri
+                    </a>
                 </li>
+
                 <li class="nav-item">
                     <a class="nav-link" href="#">Produk</a>
                 </li>
@@ -34,7 +40,9 @@
                     <a class="nav-link" href="#">Spare Parts & Service</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">By Brand</a>
+                    <a class="nav-link {{ Route::is(patterns: 'bybrand') ? 'active' : '' }}" href="{{ route('bybrand') }}">
+                        By Brand
+                    </a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="#">Perusahaan</a>
