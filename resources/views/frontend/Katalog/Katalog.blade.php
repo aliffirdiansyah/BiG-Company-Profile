@@ -1,6 +1,6 @@
 @extends('frontend.layouts.app')
 
-@section('title', 'Home | BiG Airtech')
+@section('title', 'Katalog | BiG Airtech')
 
 @section('content')
 <section class="hero-katalog-section reveal">

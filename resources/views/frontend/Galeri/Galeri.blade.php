@@ -25,22 +25,59 @@
 
   <div class="gallery-masonry">
     <div class="gallery-item">
-      <img loading="lazy" src="https://picsum.photos/500/700?1" alt="">
+       <img loading="lazy"
+        src="{{ asset('Images/galeri/Bengkel Kompresor Screw dan Piston.webp') }}"
+        alt="BiG Airtech Technician"
+    >
     </div>
-    <div class="gallery-item">
-      <img loading="lazy" src="https://picsum.photos/500/400?2" alt="">
+
+        <div class="gallery-item">
+       <img loading="lazy"
+        src="{{ asset('Images/galeri/distributor kompresor boge indonesia.webp') }}"
+        alt="BiG Airtech Technician"
+    >
     </div>
-    <div class="gallery-item">
-      <img loading="lazy" src="https://picsum.photos/500/600?3" alt="">
+
+        <div class="gallery-item">
+       <img loading="lazy"
+        src="{{ asset('Images/galeri/Kompresor Screw Murah Berkualitas Surabaya Bekasi Jakarta.webp') }}"
+        alt="BiG Airtech Technician"
+    >
     </div>
-    <div class="gallery-item">
-      <img loading="lazy" src="https://picsum.photos/500/800?4" alt="">
+
+        <div class="gallery-item">
+       <img loading="lazy"
+        src="{{ asset('Images/galeri/Spesialis Kompresor Bogor.webp') }}"
+        alt="BiG Airtech Technician"
+    >
     </div>
-    <div class="gallery-item">
-      <img loading="lazy" src="https://picsum.photos/500/450?5" alt="">
+
+     <div class="gallery-item">
+       <img loading="lazy"
+        src="{{ asset('Images/galeri/Overhaul Kompresor Screw.webp') }}"
+        alt="BiG Airtech Technician"
+    >
     </div>
-    <div class="gallery-item">
-      <img loading="lazy" src="https://picsum.photos/500/650?6" alt="">
+
+        <div class="gallery-item">
+       <img loading="lazy"
+        src="{{ asset('Images/galeri/distributor kompresor boge indonesia.webp') }}"
+        alt="BiG Airtech Technician"
+    >
+    </div>
+
+        <div class="gallery-item">
+       <img loading="lazy"
+        src="{{ asset('Images/galeri/Spesialis Kompresor Surabaya.webp') }}"
+        alt="BiG Airtech Technician"
+    >
+    </div>
+
+        <div class="gallery-item">
+       <img loading="lazy"
+        src="{{ asset('Images/galeri/Spesialis Kompresor Tangerang.webp') }}"
+        alt="BiG Airtech Technician"
+    >
     </div>
   </div>
 </section>
