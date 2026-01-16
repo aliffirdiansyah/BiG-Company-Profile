@@ -3,26 +3,22 @@
 @section('title', 'Katalog | BiG Airtech')
 
 @section('content')
-<section class="hero-katalog-section reveal">
+<section class="hero-section reveal">
     <img
-        src="{{ asset('Images/hero-katalog.jpg') }}"
+        src="{{ asset('Images/Hero.jpg') }}"
         alt="BiG Airtech Technician"
-        class="hero-katalog-bg"
+        class="hero-bg"
     >
 
-    <div class="hero-katalog-card-wrapper">
-        <div class="hero-katalog-card text-center">
-            <h2>KATALOG PRODUK</h2>
+    <div class="hero-card-wrapper">
+        <div class="hero-card text-center">
+            <h2>KATALOG</h2>
             <p>
-                SOLUSI LENGKAP KOMPRESOR INDUSTRI—UNIT BARU, SPARE PART,
-                SERVIS, HINGGA RENTAL UNTUK BERBAGAI <strong>BRAND GLOBAL</strong>,
-                DIDUKUNG <strong>TEKNISI BERPENGALAMAN</strong> DAN
-                <strong>LAYANAN NASIONAL</strong>.
+                Katalog produk kami.
             </p>
         </div>
     </div>
 </section>
-
 <div class="container">
    <section class="katalog after-hero reveal">
   <div class="katalog-row">

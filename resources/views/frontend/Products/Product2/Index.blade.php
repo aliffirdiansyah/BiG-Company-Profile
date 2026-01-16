@@ -1,64 +1,66 @@
 @extends('frontend.layouts.app')
 
-@section('title', 'Home | BiG Airtech')
+@section('title', 'BiG Air Screw Compressor | BiG Airtech')
 
 @section('content')
 
-<section class="hero-katalog-section reveal">
-    <img src="{{ asset('Images/Chicago Pneumatic/Kompresor Chicago Pneumatic Indonesia.webp') }}" alt="BiG Airtech Technician" class="hero-katalog-bg">
-    <div class="hero-katalog-card-wrapper">
-        <div class="hero-katalog-card text-center">
-            <h2>BiG Air Screw Compressor</h2>
+<section class="hero-section reveal">
+    <img
+        src="{{ asset('Images/Hero.jpg') }}"
+        alt="BiG Airtech Technician"
+        class="hero-bg"
+    >
+
+    <div class="hero-card-wrapper">
+        <div class="hero-card text-center">
+            <h2>BiG AIR SCREW COMPRESSOR</h2>
+            <p>
+                <strong>Distributor BiG Air Screw Compressor.</strong>
+            </p>
         </div>
     </div>
 </section>
 
-<div class="container">
-<section class="produk-section reveal after-hero">
+<section class="produk-shop-section after-hero reveal">
+    <div class="container">
 
-    <!-- ITEM 1 -->
-    <div class="produk-row">
-        <div class="produk-card">
-            <div class="produk-col image">
-                <img src="{{ asset('Images/Chicago Pneumatic/Kompresor Chicago Pneumatic.webp') }}" alt="CPM & CPF Series">
+        <div class="produk-grid">
+
+            <!-- CARD 1 -->
+            <div class="produk-card">
+                <div class="produk-image">
+                    <img src="{{ asset('Images/BiG/Fixed.webp') }}"
+                         alt="Fixed Speed Screw Compressor" class="lightbox-trigger">
+                </div>
+                <div class="produk-body">
+                    <h3>Fixed Speed Screw Compressor</h3>
+                    <p>Kompresor screw fixed speed dengan performa stabil untuk operasional industri.</p>
+                    {{-- <a href="#" class="btn-produk">Lebih Lanjut</a> --}}
+                </div>
             </div>
-            <div class="produk-col text">
-                <h3>CPM & CPF Series</h3>
-                <p>• deskripsi</p>
-                <a href="#" class="btn-produk">Lebih Lanjut</a>
+
+            <!-- CARD 2 -->
+            <div class="produk-card">
+                <div class="produk-image">
+                    <img src="{{ asset('Images/BiG/Variable.webp') }}"
+                         alt="Variable Speed Screw Compressor" class="lightbox-trigger">
+                </div>
+                <div class="produk-body">
+                    <h3>Variable Speed Screw Compressor</h3>
+                    <p>Kompresor screw inverter hemat energi dengan kontrol tekanan presisi.</p>
+                    {{-- <a href="#" class="btn-produk">Lebih Lanjut</a> --}}
+                </div>
             </div>
+
         </div>
-    </div>
 
-    <!-- ITEM 2 -->
-    <div class="produk-row reverse">
-        <div class="produk-card">
-            <div class="produk-col image">
-                <img src="{{ asset('Images/Chicago Pneumatic/Kompresor Oil Free.webp') }}" alt="WisAir Oil Free Compressor">
-            </div>
-            <div class="produk-col text">
-                <h3>WisAir Oil Free Compressor</h3>
-                <p>• deskripsi</p>
-                <a href="#" class="btn-produk">Lebih Lanjut</a>
-            </div>
-        </div>
     </div>
-
-    <!-- ITEM 3 -->
-    <div class="produk-row">
-        <div class="produk-card">
-            <div class="produk-col image">
-                <img src="{{ asset('Images/Chicago Pneumatic/Kompresor Booster High Pressure 40 Bar Murah Berkualitas Surabaya Bekasi Jakarta Indonesia.webp') }}" alt="bstAir Booster Compressor">
-            </div>
-            <div class="produk-col text">
-                <h3>bstAir Booster Compressor</h3>
-                <p>• deskripsi</p>
-                <a href="#" class="btn-produk">Lebih Lanjut</a>
-            </div>
-        </div>
-    </div>
-
 </section>
+
+<!-- LIGHTBOX -->
+<div class="lightbox" id="lightbox">
+    <span class="lightbox-close">&times;</span>
+    <img class="lightbox-img" id="lightbox-img" alt="">
 </div>
 
 @endsection

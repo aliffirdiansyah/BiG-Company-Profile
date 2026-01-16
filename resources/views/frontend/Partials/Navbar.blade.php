@@ -1,15 +1,16 @@
 <nav class="navbar navbar-expand-lg navbar-light bg-light shadow-sm fixed-top">
     <div class="container">
 
-        <!-- LOGO -->
-        <a class="navbar-brand d-flex align-items-center" href="{{ url('/') }}">
-            <img
-                src="{{ asset('Images/logo.png') }}"
-                alt="BiG Airtech – Air Compressor Specialist"
-                height="36"
-                loading="lazy"
-            >
-        </a>
+       <!-- LOGO -->
+<a class="navbar-brand logo-wrap" href="{{ url('/') }}">
+    <img
+        src="{{ asset('Images/Logo.png') }}"
+        alt="BiG Airtech Logo"
+        class="logo-icon"
+        loading="lazy"
+    >
+</a>
+
 
         <!-- TOGGLER -->
         <button class="navbar-toggler custom-toggler collapsed"
@@ -59,7 +60,9 @@
                         <li><a class="dropdown-item {{ Route::is('product1') ? 'active' : '' }}" href="{{ route('product1') }}">
                         Chicago Pneumatic Air Compressor
                     </a></li>
-                        <li><a class="dropdown-item" href="#">BiG Air Screw Compressor</a></li>
+                        <li><a class="dropdown-item {{ Route::is('product2') ? 'active' : '' }}" href="{{ route('product2') }}">
+                        BiG Air Screw Compressor
+                    </a></li>
                         <li><a class="dropdown-item {{ Route::is('product3') ? 'active' : '' }}" href="{{ route('product3') }}">
                         BOGE Air Compressor
                     </a></li>
@@ -80,13 +83,20 @@
 
                     <ul class="dropdown-menu shadow-sm border-0">
                         <li><a class="dropdown-item {{ Route::is('accessories') ? 'active' : '' }}" href="{{ route('accessories') }}">
-                        All Brand Screw Compressor
+                        Spare Parts Screw Compressor
+                    </a></li>
+                    <li><a class="dropdown-item {{ Route::is('perbaikan') ? 'active' : '' }}" href="{{ route('perbaikan') }}">
+                        Layanan Servis & Perawatan Screw Compressor
                     </a></li>
                     <li><a class="dropdown-item {{ Route::is('chiller') ? 'active' : '' }}" href="{{ route('chiller') }}">
-                        Air & Water Cooled Chiller
+                        Layanan Servis & Perawatan Air & Water Cooled Chiller
                     </a></li>
-                        <li><a class="dropdown-item" href="#">Sewa / Rental Kompressor</a></li>
-                        <li><a class="dropdown-item" href="#">Instalasi Kompresor</a></li>
+                    <li><a class="dropdown-item {{ Route::is('sewa') ? 'active' : '' }}" href="{{ route('sewa') }}">
+                        Sewa / Rental Kompressor
+                    </a></li>
+                           <li><a class="dropdown-item {{ Route::is('instalasi') ? 'active' : '' }}" href="{{ route('instalasi') }}">
+                        Instalasi Sistem Udara Terkompresi
+                    </a></li>
                     </ul>
                 </li>
 

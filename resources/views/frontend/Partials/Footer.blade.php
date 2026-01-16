@@ -3,11 +3,23 @@
 
         <!-- BRAND -->
         <div class="footer-col">
-            <img src="{{ asset('Images/logo.png') }}" alt="BiG Airtech" class="footer-logo">
-            <p>
-                Solusi lengkap kompresor industri—unit baru, spare part, servis, hingga rental untuk berbagai brand global, didukung teknisi berpengalaman dan layanan nasional.
+            <!-- FOOTER LOGO -->
+            <div class="footer-brand">
+                <img
+                    src="{{ asset('Images/Logo putih.png') }}"
+                    alt="BiG Airtech Logo"
+                    class="footer-logo"
+                    loading="lazy"
+                >
+            </div>
+
+            <p class="footer-desc">
+                Solusi lengkap kompresor industri—unit baru, spare part, servis, hingga rental
+                untuk berbagai brand global, didukung teknisi berpengalaman dan layanan nasional.
             </p>
         </div>
+
+
 
         <!-- MENU -->
         <div class="footer-col">

@@ -3,17 +3,19 @@
 @section('title', 'By Brand | BiG Airtech')
 
 @section('content')
-<section class="hero-katalog-section reveal">
+<section class="hero-section reveal">
     <img
-        src="{{ asset('Images/hero-galeri.jpg') }}"
+        src="{{ asset('Images/Hero.jpg') }}"
         alt="BiG Airtech Technician"
-        class="hero-galeri-bg"
+        class="hero-bg"
     >
 
-    <div class="hero-katalog-card-wrapper">
-        <div class="hero-katalog-card text-center">
+    <div class="hero-card-wrapper">
+        <div class="hero-card text-center">
             <h2>BY BRAND</h2>
-            <strong>BRAND YANG KAMI TANGANI.</strong>
+            <p>
+                Seluruh Brand yang Kami Tangani.
+            </p>
         </div>
     </div>
 </section>
@@ -119,16 +121,36 @@
         <img src="{{ asset('Images/brands/rotorcomp.webp') }}" alt="Rotorcomp">
     </div>
 
-    <div class="brand-box" data-tooltip="Aerzen">
-        <img src="{{ asset('Images/brands/aerzen.webp') }}" alt="Aerzen">
+    <div class="brand-box" data-tooltip="Kaishan">
+        <img src="{{ asset('Images/brands/kaishan.webp') }}" alt="Kaishan">
     </div>
 
-    <div class="brand-box" data-tooltip="Mattei">
-        <img src="{{ asset('Images/brands/mattei.webp') }}" alt="Mattei">
+    <div class="brand-box" data-tooltip="Hanbell">
+        <img src="{{ asset('Images/brands/hanbell.webp') }}" alt="Hanbell">
     </div>
 
-    <div class="brand-box" data-tooltip="MANN Filter">
-        <img src="{{ asset('Images/brands/mann filter.webp') }}" alt="MANN Filter">
+    <div class="brand-box" data-tooltip="Elite Air">
+        <img src="{{ asset('Images/brands/elite air.webp') }}" alt="Elite Air">
+    </div>
+
+        <div class="brand-box" data-tooltip="Hengda">
+        <img src="{{ asset('Images/brands/hengda.webp') }}" alt="Hengda">
+    </div>
+
+    <div class="brand-box" data-tooltip="Luowei">
+        <img src="{{ asset('Images/brands/luowei.webp') }}" alt="Luowei">
+    </div>
+
+    <div class="brand-box" data-tooltip="Auliss">
+        <img src="{{ asset('Images/brands/Auliss.webp') }}" alt="Auliss">
+    </div>
+
+    <div class="brand-box" data-tooltip="Ruihong">
+        <img src="{{ asset('Images/brands/ruihong.webp') }}" alt="Ruihong">
+    </div>
+
+     <div class="brand-box" data-tooltip="Shark">
+        <img src="{{ asset('Images/brands/shark.webp') }}" alt="Shark">
     </div>
 
 </div>

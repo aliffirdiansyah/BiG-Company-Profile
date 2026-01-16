@@ -13,6 +13,9 @@
     <link rel="stylesheet" href="{{ asset('css/app.css') }}">
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <link rel="icon" href="{{ asset('Icon.ico') }}">
+
 </head>
 <body>
 
@@ -84,60 +87,108 @@ document.addEventListener("DOMContentLoaded", () => {
 </button>
 
 <script>
-const waMulti = document.querySelector('.wa-multi');
-const waMain = document.querySelector('.wa-main');
+document.addEventListener("DOMContentLoaded", () => {
 
-waMain.addEventListener('click', () => {
-    waMulti.classList.toggle('active');
-});
+    /* ======================
+       CSS SPEED VARIABLE
+    ====================== */
+    document.documentElement.style.setProperty('--speed-right', '35s');
+    document.documentElement.style.setProperty('--speed-left', '30s');
 
-/* Tutup kalau klik luar */
-document.addEventListener('click', (e) => {
-    if (!waMulti.contains(e.target)) {
-        waMulti.classList.remove('active');
+
+    /* ======================
+       REVEAL ANIMATION
+    ====================== */
+    const reveals = document.querySelectorAll(".reveal");
+
+    if (reveals.length) {
+        const observer = new IntersectionObserver(entries => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add("active");
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.15 });
+
+        reveals.forEach(el => observer.observe(el));
     }
+
+
+    /* ======================
+       WHATSAPP FLOAT
+    ====================== */
+    const waMulti = document.querySelector('.wa-multi');
+    const waMain = document.querySelector('.wa-main');
+
+    if (waMulti && waMain) {
+        waMain.addEventListener('click', (e) => {
+            e.stopPropagation();
+            waMulti.classList.toggle('active');
+        });
+
+        document.addEventListener('click', (e) => {
+            if (!waMulti.contains(e.target)) {
+                waMulti.classList.remove('active');
+            }
+        });
+    }
+
+
+    /* ======================
+       BACK TO TOP
+    ====================== */
+    const backToTop = document.getElementById('backToTop');
+
+    if (backToTop) {
+        window.addEventListener('scroll', () => {
+            backToTop.classList.toggle('show', window.scrollY > 300);
+        });
+
+        backToTop.addEventListener('click', () => {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+    }
+
+
+    /* ======================
+       LIGHTBOX (FINAL & BENAR)
+    ====================== */
+    const lightbox = document.getElementById('lightbox');
+    const lightboxImg = document.getElementById('lightbox-img');
+    const closeBtn = document.querySelector('.lightbox-close');
+    const triggers = document.querySelectorAll('.lightbox-trigger');
+
+    if (lightbox && lightboxImg && closeBtn && triggers.length) {
+
+        triggers.forEach(img => {
+            img.addEventListener('click', () => {
+                lightbox.classList.add('active');
+                lightboxImg.src = img.src;
+                lightboxImg.alt = img.alt;
+            });
+        });
+
+        closeBtn.addEventListener('click', () => {
+            lightbox.classList.remove('active');
+        });
+
+        lightbox.addEventListener('click', (e) => {
+            if (e.target === lightbox) {
+                lightbox.classList.remove('active');
+            }
+        });
+
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape') {
+                lightbox.classList.remove('active');
+            }
+        });
+    }
+
 });
 </script>
 
-<script>
-const backToTop = document.getElementById('backToTop');
-
-window.addEventListener('scroll', () => {
-    if (window.scrollY > 300) {
-        backToTop.classList.add('show');
-    } else {
-        backToTop.classList.remove('show');
-    }
-});
-
-backToTop.addEventListener('click', () => {
-    window.scrollTo({
-        top: 0,
-        behavior: 'smooth'
-    });
-});
-</script>
-<script>
-  const lightbox = document.getElementById('lightbox');
-  const lightboxImg = document.getElementById('lightboxImg');
-
-  document.querySelectorAll('.gallery-item img').forEach(img => {
-    img.addEventListener('click', () => {
-      lightboxImg.src = img.src;
-      lightbox.classList.add('active');
-    });
-  });
-
-  document.querySelector('.lightbox-close').addEventListener('click', () => {
-    lightbox.classList.remove('active');
-  });
-
-  lightbox.addEventListener('click', e => {
-    if (e.target === lightbox) {
-      lightbox.classList.remove('active');
-    }
-  });
-</script>
 
 </body>
 </html>

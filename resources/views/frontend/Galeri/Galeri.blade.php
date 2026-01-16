@@ -3,18 +3,19 @@
 @section('title', 'Galeri | BiG Airtech')
 
 @section('content')
-<section class="hero-katalog-section reveal">
+
+<section class="hero-section reveal">
     <img
-        src="{{ asset('Images/hero-galeri.jpg') }}"
+        src="{{ asset('Images/Hero.jpg') }}"
         alt="BiG Airtech Technician"
-        class="hero-galeri-bg"
+        class="hero-bg"
     >
 
-    <div class="hero-katalog-card-wrapper">
-        <div class="hero-katalog-card text-center">
+    <div class="hero-card-wrapper">
+        <div class="hero-card text-center">
             <h2>GALERI</h2>
             <p>
-                DOKUMENTASI <strong>PROYEK</strong>, <strong>KEGIATAN</strong>, DAN <strong>LAYANAN</strong> YANG KAMI TANGANI.
+                Galeri Foto <strong>Kegiatan & Layanan Kami.</strong>
             </p>
         </div>
     </div>
@@ -22,75 +23,72 @@
 
 <div class="container">
     <section class="gallery reveal after-hero">
+        <div class="gallery-masonry">
 
-  <div class="gallery-masonry">
-    <div class="gallery-item">
-       <img loading="lazy"
-        src="{{ asset('Images/galeri/Bengkel Kompresor Screw dan Piston.webp') }}"
-        alt="BiG Airtech Technician"
-    >
+            <div class="gallery-item">
+                <img loading="lazy"
+                     src="{{ asset('Images/galeri/Jasa Servis Kompresor Screw.webp') }}"
+                     alt="Jasa Servis Kompresor Screw"
+                     class="lightbox-trigger">
+            </div>
+
+            <div class="gallery-item">
+                <img loading="lazy"
+                     src="{{ asset('Images/galeri/Kompresor Screw Cina.webp') }}"
+                     alt="Kompresor Screw Cina"
+                     class="lightbox-trigger">
+            </div>
+
+            <div class="gallery-item">
+                <img loading="lazy"
+                     src="{{ asset('Images/galeri/Overhaul Kompresor Screw.webp') }}"
+                     alt="Overhaul Kompresor Screw"
+                     class="lightbox-trigger">
+            </div>
+
+            <div class="gallery-item">
+                <img loading="lazy"
+                     src="{{ asset('Images/galeri/Perawatan Kompresor Screw.webp') }}"
+                     alt="Perawatan Kompresor Screw"
+                     class="lightbox-trigger">
+            </div>
+
+            <div class="gallery-item">
+                <img loading="lazy"
+                     src="{{ asset('Images/galeri/Servis Kompresor Screw Surabaya.webp') }}"
+                     alt="Servis Kompresor Screw Surabaya"
+                     class="lightbox-trigger">
+            </div>
+
+            <div class="gallery-item">
+                <img loading="lazy"
+                     src="{{ asset('Images/galeri/Servis Kompresor Screw.webp') }}"
+                     alt="Servis Kompresor Screw"
+                     class="lightbox-trigger">
+            </div>
+
+            <div class="gallery-item">
+                <img loading="lazy"
+                     src="{{ asset('Images/galeri/Spare Part Kompresor Screw.webp') }}"
+                     alt="Spare Part Kompresor Screw"
+                     class="lightbox-trigger">
+            </div>
+
+            <div class="gallery-item">
+                <img loading="lazy"
+                     src="{{ asset('Images/galeri/Spesialis Kompresor Screw.webp') }}"
+                     alt="Spesialis Kompresor Screw"
+                     class="lightbox-trigger">
+            </div>
+
+        </div>
+    </section>
+
+    <!-- LIGHTBOX -->
+    <div class="lightbox" id="lightbox">
+        <span class="lightbox-close">&times;</span>
+        <img class="lightbox-img" id="lightbox-img" alt="">
     </div>
-
-        <div class="gallery-item">
-       <img loading="lazy"
-        src="{{ asset('Images/galeri/distributor kompresor boge indonesia.webp') }}"
-        alt="BiG Airtech Technician"
-    >
-    </div>
-
-        <div class="gallery-item">
-       <img loading="lazy"
-        src="{{ asset('Images/galeri/Kompresor Screw Murah Berkualitas Surabaya Bekasi Jakarta.webp') }}"
-        alt="BiG Airtech Technician"
-    >
-    </div>
-
-        <div class="gallery-item">
-       <img loading="lazy"
-        src="{{ asset('Images/galeri/Spesialis Kompresor Bogor.webp') }}"
-        alt="BiG Airtech Technician"
-    >
-    </div>
-
-     <div class="gallery-item">
-       <img loading="lazy"
-        src="{{ asset('Images/galeri/Overhaul Kompresor Screw.webp') }}"
-        alt="BiG Airtech Technician"
-    >
-    </div>
-
-        <div class="gallery-item">
-       <img loading="lazy"
-        src="{{ asset('Images/galeri/distributor kompresor boge indonesia.webp') }}"
-        alt="BiG Airtech Technician"
-    >
-    </div>
-
-        <div class="gallery-item">
-       <img loading="lazy"
-        src="{{ asset('Images/galeri/Spesialis Kompresor Surabaya.webp') }}"
-        alt="BiG Airtech Technician"
-    >
-    </div>
-
-        <div class="gallery-item">
-       <img loading="lazy"
-        src="{{ asset('Images/galeri/Spesialis Kompresor Tangerang.webp') }}"
-        alt="BiG Airtech Technician"
-    >
-    </div>
-  </div>
-</section>
-
-<!-- LIGHTBOX -->
-<div class="lightbox" id="lightbox">
-  <span class="lightbox-close">&times;</span>
-  <img class="lightbox-img" id="lightboxImg">
-</div>
-
-
-
-
 </div>
 
 @endsection

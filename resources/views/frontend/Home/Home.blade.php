@@ -36,7 +36,7 @@
 
         <div class="service-card">
             <div class="icon"><i class="fa-solid fa-screwdriver-wrench"></i></div>
-            <p>PENJUALAN<br>SPARE PART</p>
+            <p>PENJUALAN<br>SPARE PART & ACCESSORIES</p>
         </div>
 
         <div class="service-card">
@@ -54,7 +54,7 @@
 
         <div class="service-card">
             <div class="icon"><i class="fa-solid fa-user-gear"></i></div>
-            <p>INSTALASI</p>
+            <p>INSTALASI SISTEM UDARA TERKOMPRESI</p>
         </div>
     </div>
 </section>

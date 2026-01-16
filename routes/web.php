@@ -2,16 +2,21 @@
 
 use App\Http\Controllers\aboutUsController;
 use App\Http\Controllers\accessoriesController;
+use App\Http\Controllers\ArticleController;
 use App\Http\Controllers\artikelController;
 use App\Http\Controllers\bybrandController;
 use App\Http\Controllers\chillerController;
 use App\Http\Controllers\galeriController;
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\instalasiController;
 use App\Http\Controllers\katalogController;
+use App\Http\Controllers\perbaikanController;
 use App\Http\Controllers\product1Controller;
 use App\Http\Controllers\product2Controller;
 use App\Http\Controllers\product3Controller;
 use App\Http\Controllers\product4Controller;
+use App\Http\Controllers\sewaController;
+use App\Http\Controllers\CkeditorController;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', [HomeController::class, 'index'])->name('home');
@@ -38,9 +43,22 @@ Route::get('/accessories', [accessoriesController::class, 'index'])->name('acces
 
 Route::get('/chiller', [chillerController::class, 'index'])->name('chiller');
 
-Route::get('/sewa', [chillerController::class, 'index'])->name('sewa');
+Route::get('/sewa', [sewaController::class, 'index'])->name('sewa');
 
-Route::get('/instalasi', [chillerController::class, 'index'])->name('instalasi');
+Route::get('/instalasi', [instalasiController::class, 'index'])->name('instalasi');
+
+Route::get('/perbaikan', [perbaikanController::class, 'index'])->name('perbaikan');
+
+// Admin (opsional)
+Route::prefix('admin')
+    ->name('admin.')
+    // ->middleware(['auth']) // opsional
+    ->group(function () {
+        Route::resource('articles', ArticleController::class);
+    });
+
+Route::post('/admin/ckeditor/upload', [CkeditorController::class, 'uploadCkeditor'])
+    ->name('ckeditor.upload');
 
 
 
